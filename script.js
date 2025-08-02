@@ -86,5 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlide(currentSlide);
         }
     }
+    
+    // --- Disable Right-Click to Prevent Copying ---
+    // This adds an event listener to the whole document that listens for a 'contextmenu' event (a right-click).
+    // event.preventDefault() stops the default browser action, which is to show the context menu.
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
 });
